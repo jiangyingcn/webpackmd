@@ -20,6 +20,12 @@ module.exports = {
             // filename: "html/index.html"
         }),
     ],
+    module: {
+        rules: [{
+            test: /\.md$/,
+            use: ['./md-loader/index.js']
+        }]
+    },
     devServer: {
         port: 8000,
         open: true,
